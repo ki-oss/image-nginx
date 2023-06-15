@@ -1,0 +1,9 @@
+server {
+    listen ${NGINX_PORT};
+
+    location / {
+      return 301 ${REDIRECT_SCHEME}://${REDIRECT_HOST}$request_uri;
+    }
+
+}
+
